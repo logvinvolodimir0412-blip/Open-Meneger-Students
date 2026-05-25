@@ -21,9 +21,34 @@ int main(void){
   //title
   std::cout<<"\n\t\tOpen Meneger Students\n"<<std::endl;
   
-  //printing menu
-  for(size_t i=0; i<len; ++i){
-    std::cout<<menu[i]<<std::endl;
+  //choice
+  int choice;
+  
+  //main loop
+  bool run = 1;
+  while(run){
+    //printing menu
+    for(size_t i=0; i<len; ++i){
+      std::cout<<menu[i]<<std::endl;
+    }
+    
+    //input choice
+    std::cin>>choice;
+    
+    switch(choice){
+      case 0:
+        run = 0;
+        break;
+      case 1:
+        //func()
+        break;
+      case 2:
+        //func()
+        break;
+      default:
+        std::cout<<"Error command"<<std::endl;
+        break;
+    }
   }
   
   return 0;
