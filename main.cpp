@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <string>
 
 //basic struct
@@ -7,7 +8,25 @@ struct Student {
   unsigned int age;
 };
 
+//add new student to vector
+void AddStudent(Student* student, std::vector<Student>* db){
+  //Name
+  std::cout<<"Name:";
+  getline(std::cin>>std::ws, student->name);
+  
+  //Age
+  std::cout<<"Age:";
+  std::cin>>student->age;
+  
+  db->push_back(*student);
+}
+
 int main(void){
+  Student NewStudent;
+  
+  //db students
+  std::vector<Student>Students = {};
+  
   //main menu
   std::string menu[] = {
     "1. List students",
@@ -43,7 +62,7 @@ int main(void){
         //func()
         break;
       case 2:
-        //func()
+        AddStudent(&NewStudent, &Students);
         break;
       default:
         std::cout<<"Error command"<<std::endl;
