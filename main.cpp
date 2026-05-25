@@ -21,6 +21,15 @@ void AddStudent(Student* student, std::vector<Student>* db){
   db->push_back(*student);
 }
 
+//printing students
+void ListStudents(std::vector<Student>* db){
+  for(size_t s=0; s < db->size(); ++s){
+    std::cout<<db->at(s).name<<std::endl;
+    std::cout<<db->at(s).age<<std::endl;
+    std::cout<<std::endl;
+  }
+}
+
 int main(void){
   Student NewStudent;
   
@@ -59,7 +68,7 @@ int main(void){
         run = 0;
         break;
       case 1:
-        //func()
+        ListStudents(&Students);
         break;
       case 2:
         AddStudent(&NewStudent, &Students);
