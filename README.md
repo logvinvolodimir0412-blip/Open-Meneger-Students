@@ -1,2 +1,2 @@
 # Open-Meneger-Students
-Проста консольна утиліта
+The simple console util
